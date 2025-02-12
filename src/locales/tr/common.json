@@ -72,9 +72,13 @@
     }
   },
   "contact": {
-    "title": "Bize Ulaşın",
-    "description": "Uzmanlarımızla iletişime geçin",
-    "whatsapp": "WhatsApp",
-    "email": "E-posta"
+    "title": "Bizimle İletişime Geçin",
+    "description": "Sorularınız mı var? Bize ulaşın ve size yardımcı olalım.",
+    "whatsapp": "WhatsApp Desteği",
+    "email": "E-posta Desteği",
+    "advancedSolution": "Gelişmiş Çözüm",
+    "advancedSolutionSubtext": "Özel ve kapsamlı hizmetlerimizi keşfedin",
+    "vipExperience": "VIP Deneyim",
+    "vipExperienceSubtext": "Ayrıcalıklı bakım ve hizmet"
   }
 }

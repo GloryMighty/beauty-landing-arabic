@@ -185,6 +185,47 @@ const Index = () => {
               </div>
             </motion.a>
           </div>
+
+          {/* New Widgets Section */}
+          <div className="grid md:grid-cols-2 gap-8 mt-8">
+            <motion.a
+              href="https://example.com/advanced-solution"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.05 }}
+              viewport={{ once: true }}
+              className="glass-panel p-6 rounded-2xl flex items-center gap-4 cursor-pointer"
+            >
+              <div className="h-12 w-12 bg-purple-500/10 rounded-full flex items-center justify-center">
+                <Check className="h-6 w-6 text-purple-600" />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold">{t('contact.advancedSolution')}</h3>
+                <p className="text-muted-foreground text-sm">{t('contact.advancedSolutionSubtext')}</p>
+              </div>
+            </motion.a>
+
+            <motion.a
+              href="https://example.com/vip-experience"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.05 }}
+              viewport={{ once: true }}
+              className="glass-panel p-6 rounded-2xl flex items-center gap-4 cursor-pointer"
+            >
+              <div className="h-12 w-12 bg-gold-500/10 rounded-full flex items-center justify-center">
+                <Check className="h-6 w-6 text-gold-600" />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold">{t('contact.vipExperience')}</h3>
+                <p className="text-muted-foreground text-sm">{t('contact.vipExperienceSubtext')}</p>
+              </div>
+            </motion.a>
+          </div>
         </div>
       </section>
     </div>

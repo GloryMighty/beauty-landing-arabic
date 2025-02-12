@@ -72,9 +72,13 @@
     }
   },
   "contact": {
-    "title": "اتصل بنا",
-    "description": "تواصل مع متخصصينا",
-    "whatsapp": "واتساب",
-    "email": "البريد الإلكتروني"
+    "title": "تواصل معنا",
+    "description": "هل لديك أسئلة؟ اتصل بنا ونحن هنا للمساعدة",
+    "whatsapp": "دعم واتساب",
+    "email": "دعم البريد الإلكتروني",
+    "advancedSolution": "الحل المتقدم",
+    "advancedSolutionSubtext": "اكتشف خدماتنا الخاصة والشاملة",
+    "vipExperience": "تجربة VIP",
+    "vipExperienceSubtext": "رعاية وخدمة متميزة"
   }
 }
