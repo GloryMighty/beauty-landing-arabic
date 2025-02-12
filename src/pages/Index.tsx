@@ -94,14 +94,14 @@ const Index = () => {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: index === 1 ? -20 : 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 className="glass-panel p-8 rounded-2xl"
               >
                 <h3 className="text-2xl font-bold mb-4">{plan.name}</h3>
-                <p className="text-4xl font-display font-bold mb-6">{plan.price}</p>
+                <p className="text-4xl font-display font-bold mb-6">{plan.price} <span className="text-lg">{plan.priceSubtext}</span></p>
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center">
@@ -190,54 +190,60 @@ const services = [
   {
     title: "Facial Aesthetics",
     description: "Advanced facial treatments to enhance your natural beauty",
-    image: "https://images.unsplash.com/photo-1581090464777-f77fbcfc3843?auto=format&fit=crop&w=800&q=80",
+    image: "https://www.instyle.com/thmb/mr2z_GefR-T7RDn1_ud2GFRA1xc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ZendayaShortHairSocial-735b64b84f53470f93fc6b21dd783f08.jpg",
   },
   {
     title: "Dental Care",
     description: "Complete dental transformation for a perfect smile",
-    image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?auto=format&fit=crop&w=800&q=80",
+    image: "https://gp-assets-1.growthplug.com/website_files/4790/bigstock-Woman-smile-and-teeth-Dental--25845860.jpg",
   },
   {
     title: "Body Contouring",
     description: "Sculpt and shape your body to perfection",
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+    image: "https://st5.depositphotos.com/16122460/78405/i/450/depositphotos_784056240-stock-photo-chocolate-body-wrap-spa-worker.jpg",
   },
 ];
 
 const pricingPlans = [
   {
-    name: "Basic Care",
-    price: "$999",
+    name: "Basic plan",
+    price: "$299",
+    priceSubtext: "starting from",
     features: [
       "Initial Consultation",
-      "Basic Treatment Plan",
-      "3 Follow-up Sessions",
-      "Basic Care Products",
+      "Design and production",
+      "Hosting on Your server",
+      "Simple website design",
     ],
   },
   {
-    name: "Premium Care",
-    price: "$2999",
+    name: "Advanced plan",
+    price: "$599",
+    priceSubtext: "starting from",
     features: [
-      "Priority Consultation",
-      "Comprehensive Treatment",
-      "6 Follow-up Sessions",
-      "Premium Care Products",
-      "24/7 Support",
+      "Ready to go solution",
+      "3 Updates a year for FREE",
+      "1 year FREE hosted server included",
+      "SEO with 3 FREE blog posts a month",
+      "Better digital presence ",
+      "Advanced website design"
     ],
     featured: true,
   },
   {
     name: "VIP Experience",
-    price: "$4999",
+    price: "$999",
+    priceSubtext: "starting from",
     features: [
-      "Immediate Consultation",
-      "Full Treatment Package",
-      "Unlimited Follow-ups",
-      "Luxury Care Products",
-      "Dedicated Specialist",
-      "Priority Booking",
+      "Everything in Advanced, PLUS",
+      "Premium domain included",
+      "Unlimited updates on request",
+      "AI Chatbot Integration",
+      "Superior website design",
+      "Users authentication",
+      "2 years of hosting",
     ],
+    featured: true,
   },
 ];
 

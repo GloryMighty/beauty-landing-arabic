@@ -62,7 +62,37 @@ This project is built with .
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/d10a063c-f436-4a48-9c9c-291f4dbc6a3e) and click on Share -> Publish.
+### Local Development
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run development server:
+   ```bash
+   npm run dev
+   ```
+
+### Production Build
+1. Build the project:
+   ```bash
+   npm run build
+   ```
+2. Preview production build:
+   ```bash
+   npm run preview
+   ```
+
+### Deployment Options
+#### Netlify
+1. Install Netlify CLI: `npm install netlify-cli -g`
+2. Run: `netlify deploy`
+
+#### Vercel
+1. Install Vercel CLI: `npm install -g vercel`
+2. Run: `vercel`
+
+Alternatively, you can also deploy using Lovable by clicking on Share -> Publish.
 
 ## I want to use a custom domain - is that possible?
 
