@@ -1,5 +1,7 @@
 
 import { motion } from 'framer-motion';
+import { Button } from "@/components/ui/button";
+import { Check } from "lucide-react";
 import { Navbar } from '@/components/Navbar';
 
 const Index = () => {
