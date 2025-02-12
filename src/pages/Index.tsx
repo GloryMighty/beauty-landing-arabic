@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { Check, MessageSquare, Mail } from "lucide-react";
 import { Navbar } from '@/components/Navbar';
+import Map from '@/components/Map';
 
 const Index = () => {
   return (
@@ -131,7 +132,7 @@ const Index = () => {
             <p className="text-muted-foreground">Get in touch with our specialists</p>
           </motion.div>
 
-          <div className="flex justify-center gap-8">
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
             <motion.a
               href="https://wa.me/358451333953"
               target="_blank"
@@ -140,13 +141,15 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.05 }}
               viewport={{ once: true }}
-              className="glass-panel p-8 rounded-2xl flex flex-col items-center gap-4 cursor-pointer"
+              className="glass-panel p-6 rounded-2xl flex items-center gap-4 cursor-pointer"
             >
-              <div className="h-16 w-16 bg-green-500/10 rounded-full flex items-center justify-center">
-                <MessageSquare className="h-8 w-8 text-green-600" />
+              <div className="h-12 w-12 bg-green-500/10 rounded-full flex items-center justify-center">
+                <MessageSquare className="h-6 w-6 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold">WhatsApp</h3>
-              <p className="text-muted-foreground">+358 45 1333953</p>
+              <div>
+                <h3 className="text-lg font-bold">WhatsApp</h3>
+                <p className="text-muted-foreground text-sm">+358 45 1333953</p>
+              </div>
             </motion.a>
 
             <motion.a
@@ -157,15 +160,26 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.05 }}
               viewport={{ once: true }}
-              className="glass-panel p-8 rounded-2xl flex flex-col items-center gap-4 cursor-pointer"
+              className="glass-panel p-6 rounded-2xl flex items-center gap-4 cursor-pointer"
             >
-              <div className="h-16 w-16 bg-blue-500/10 rounded-full flex items-center justify-center">
-                <Mail className="h-8 w-8 text-blue-600" />
+              <div className="h-12 w-12 bg-blue-500/10 rounded-full flex items-center justify-center">
+                <Mail className="h-6 w-6 text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold">Email</h3>
-              <p className="text-muted-foreground">mamatovviacheslav@gmail.com</p>
+              <div>
+                <h3 className="text-lg font-bold">Email</h3>
+                <p className="text-muted-foreground text-sm">mamatovviacheslav@gmail.com</p>
+              </div>
             </motion.a>
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="glass-panel p-4 rounded-2xl"
+          >
+            <Map />
+          </motion.div>
         </div>
       </section>
     </div>
@@ -176,7 +190,7 @@ const services = [
   {
     title: "Facial Aesthetics",
     description: "Advanced facial treatments to enhance your natural beauty",
-    image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1581090464777-f77fbcfc3843?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Dental Care",
