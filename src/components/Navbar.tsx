@@ -53,7 +53,7 @@ export const Navbar = () => {
                 variant="outline" 
                 className="group flex items-center gap-2 border-accent/50 hover:border-accent bg-accent/10 hover:bg-accent/20 text-accent-foreground"
               >
-                <Globe className="h-4 w-4 text-accent group-hover:rotate-6 transition-transform" />
+                <Globe className="h-4 w-4 text-black group-hover:rotate-6 transition-transform" />
                 {languages.find(l => l.code === currentLang)?.name}
               </Button>
             </DropdownMenuTrigger>
