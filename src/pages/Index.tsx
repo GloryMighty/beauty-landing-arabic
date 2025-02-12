@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
 import { Check, MessageSquare, Mail } from "lucide-react";
 import { Navbar } from '@/components/Navbar';
+import { SideNavigation } from '@/components/SideNavigation';
 import Map from '@/components/Map';
 
 const Index = () => {
@@ -11,9 +12,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+      <SideNavigation />
       
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center section-padding relative">
+      <section id="hero" className="min-h-screen flex items-center justify-center section-padding relative">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2400&q=80"
@@ -129,13 +131,22 @@ const Index = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-8"
           >
             <h2 className="text-4xl font-display font-bold mb-4">{t('contact.title')}</h2>
             <p className="text-muted-foreground">{t('contact.description')}</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="glass-panel p-4 rounded-2xl mb-12"
+          >
+            <Map />
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
             <motion.a
               href="https://wa.me/358451333953"
               target="_blank"
@@ -174,15 +185,6 @@ const Index = () => {
               </div>
             </motion.a>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="glass-panel p-4 rounded-2xl"
-          >
-            <Map />
-          </motion.div>
         </div>
       </section>
     </div>
