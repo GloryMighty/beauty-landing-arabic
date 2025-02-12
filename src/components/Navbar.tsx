@@ -43,6 +43,11 @@ export const Navbar = () => {
               </a>
             </NavigationMenuItem>
             <NavigationMenuItem>
+              <a href="#contact" className="text-sm font-medium hover:text-primary/80 transition-colors">
+                Contact
+              </a>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
               <NavigationMenuTrigger className="text-sm font-medium">
                 {languages.find(l => l.code === currentLang)?.name}
               </NavigationMenuTrigger>

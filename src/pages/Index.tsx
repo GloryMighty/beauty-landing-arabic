@@ -1,7 +1,6 @@
-
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
+import { Check, MessageSquare, Mail } from "lucide-react";
 import { Navbar } from '@/components/Navbar';
 
 const Index = () => {
@@ -115,6 +114,57 @@ const Index = () => {
                 </Button>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Widgets Section */}
+      <section id="contact" className="section-padding bg-secondary/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-display font-bold mb-4">Contact Us</h2>
+            <p className="text-muted-foreground">Get in touch with our specialists</p>
+          </motion.div>
+
+          <div className="flex justify-center gap-8">
+            <motion.a
+              href="https://wa.me/358451333953"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.05 }}
+              viewport={{ once: true }}
+              className="glass-panel p-8 rounded-2xl flex flex-col items-center gap-4 cursor-pointer"
+            >
+              <div className="h-16 w-16 bg-green-500/10 rounded-full flex items-center justify-center">
+                <MessageSquare className="h-8 w-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold">WhatsApp</h3>
+              <p className="text-muted-foreground">+358 45 1333953</p>
+            </motion.a>
+
+            <motion.a
+              href="mailto:mamatovviacheslav@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.05 }}
+              viewport={{ once: true }}
+              className="glass-panel p-8 rounded-2xl flex flex-col items-center gap-4 cursor-pointer"
+            >
+              <div className="h-16 w-16 bg-blue-500/10 rounded-full flex items-center justify-center">
+                <Mail className="h-8 w-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold">Email</h3>
+              <p className="text-muted-foreground">mamatovviacheslav@gmail.com</p>
+            </motion.a>
           </div>
         </div>
       </section>
