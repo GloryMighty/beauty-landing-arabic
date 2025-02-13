@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const languages = [
   { code: 'ar', name: 'العربية' },
@@ -19,6 +20,7 @@ const languages = [
 export const Navbar = () => {
   const { t, i18n } = useTranslation('common');
   const [currentLang, setCurrentLang] = useState(i18n.language);
+  const isMobile = useIsMobile();
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
@@ -36,7 +38,7 @@ export const Navbar = () => {
           {t('navbar.title')}
         </a>
 
-        <div className="hidden md:flex items-center space-x-8">
+        <div className={`${isMobile ? 'flex' : 'hidden md:flex'} items-center space-x-8`}>
           <a 
             href="#services" 
             className="text-sm font-medium hover:text-primary/80 transition-colors"

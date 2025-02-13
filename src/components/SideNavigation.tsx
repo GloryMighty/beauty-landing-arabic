@@ -7,6 +7,7 @@ import {
   MapPin, 
   MessageSquare 
 } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const SECTIONS = [
   { id: 'hero', label: 'Home', icon: Home },
@@ -18,6 +19,7 @@ const SECTIONS = [
 export const SideNavigation: React.FC = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [progress, setProgress] = useState(0);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -80,7 +82,7 @@ export const SideNavigation: React.FC = () => {
       initial={{ opacity: 0, x: 50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-50 hidden md:block"
+      className={`fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-50 ${isMobile ? 'block' : 'hidden md:block'}`}
     >
       <div className="bg-black/10 backdrop-blur-sm rounded-full p-1.5 md:p-2 shadow-lg">
         <div className="relative">
@@ -102,28 +104,24 @@ export const SideNavigation: React.FC = () => {
             />
           </motion.div>
 
-          {/* Navigation Buttons */}
-          <div className="relative z-10 space-y-2 md:space-y-4 p-1 md:p-2">
+          {/* Navigation Icons */}
+          <div className="flex flex-col items-center space-y-4 p-1">
             {SECTIONS.map((section) => {
               const Icon = section.icon;
-              const isActive = activeSection === section.id;
-              
               return (
-                <motion.button
+                <button 
                   key={section.id}
                   onClick={() => scrollToSection(section.id)}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
                   className={`
-                    w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full transition-all duration-300
-                    ${isActive 
-                      ? 'bg-primary text-white shadow-lg' 
-                      : 'bg-white text-black hover:bg-primary/10 shadow-sm'
-                    }
+                    p-2 rounded-full transition-all duration-300 ease-in-out
+                    ${activeSection === section.id 
+                      ? 'bg-primary text-white scale-110' 
+                      : 'bg-black/10 text-black/50 hover:bg-black/20 hover:scale-105'}
                   `}
+                  aria-label={`Scroll to ${section.label} section`}
                 >
-                  <Icon className="w-4 h-4 md:w-5 md:h-5" />
-                </motion.button>
+                  <Icon className="w-4 h-4" />
+                </button>
               );
             })}
           </div>
