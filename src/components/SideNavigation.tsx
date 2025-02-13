@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Home, 
-  Scissors, 
+  Brush, 
   DollarSign, 
   MapPin, 
   MessageSquare 
@@ -10,7 +10,7 @@ import {
 
 const SECTIONS = [
   { id: 'hero', label: 'Home', icon: Home },
-  { id: 'services', label: 'Services', icon: Scissors },
+  { id: 'services', label: 'Services', icon: Brush },
   { id: 'pricing', label: 'Pricing', icon: DollarSign },
   { id: 'contact', label: 'Contact', icon: MessageSquare }
 ];

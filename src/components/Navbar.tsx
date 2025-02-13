@@ -37,13 +37,25 @@ export const Navbar = () => {
         </a>
 
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#services" className="text-sm font-medium hover:text-primary/80 transition-colors">
+          <a 
+            href="#services" 
+            className="text-sm font-medium hover:text-primary/80 transition-colors"
+            aria-label={t('toolbarButtons.services')}
+          >
             {t('toolbarButtons.services')}
           </a>
-          <a href="#pricing" className="text-sm font-medium hover:text-primary/80 transition-colors">
+          <a 
+            href="#pricing" 
+            className="text-sm font-medium hover:text-primary/80 transition-colors"
+            aria-label={t('toolbarButtons.pricing')}
+          >
             {t('toolbarButtons.pricing')}
           </a>
-          <a href="#contact" className="text-sm font-medium hover:text-primary/80 transition-colors">
+          <a 
+            href="#contact" 
+            className="text-sm font-medium hover:text-primary/80 transition-colors"
+            aria-label={t('toolbarButtons.contact')}
+          >
             {t('toolbarButtons.contact')}
           </a>
           

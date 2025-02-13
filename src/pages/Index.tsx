@@ -208,7 +208,7 @@ const Index = () => {
             </motion.a>
 
             <motion.a
-              href="https://example.com/vip-experience"
+              href="https://viacheslav.my"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
@@ -237,7 +237,7 @@ const services = [
     key: 'facial',
     title: "Facial Aesthetics",
     description: "Advanced facial treatments to enhance your natural beauty",
-    image: "https://www.instyle.com/thmb/mr2z_GefR-T7RDn1_ud2GFRA1xc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ZendayaShortHairSocial-735b64b84f53470f93fc6b21dd783f08.jpg",
+    image: "https://www.jasonbdiamond.com/wp-content/uploads/2022/10/woman-facial-profile-with-tightening-lines.jpg",
   },
   {
     key: 'dental',

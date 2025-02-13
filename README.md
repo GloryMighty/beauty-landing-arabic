@@ -94,6 +94,35 @@ This project is built with .
 
 Alternatively, you can also deploy using Lovable by clicking on Share -> Publish.
 
+## Deploying to Vercel
+
+To deploy this project to Vercel:
+
+1. Install Vercel CLI globally:
+```sh
+npm install -g vercel
+```
+
+2. Login to Vercel:
+```sh
+vercel login
+```
+
+3. Deploy the project:
+```sh
+vercel
+```
+
+For production deployment:
+```sh
+vercel --prod
+```
+
+### Deployment Notes
+- Ensure you have the latest `vercel.json` configuration
+- Node.js version 20.x is recommended
+- The project uses Vite for building and previewing
+
 ## I want to use a custom domain - is that possible?
 
 We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)

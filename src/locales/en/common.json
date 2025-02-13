@@ -75,6 +75,10 @@
     "title": "Contact Us",
     "description": "Get in touch with our specialists",
     "whatsapp": "WhatsApp",
-    "email": "Email"
+    "email": "Email",
+    "advancedSolution": "Advanced Solution",
+    "advancedSolutionSubtext": "Cutting-edge treatments tailored to your unique needs",
+    "vipExperience": "VIP Experience",
+    "vipExperienceSubtext": "Exclusive, personalized care for discerning clients"
   }
 }
