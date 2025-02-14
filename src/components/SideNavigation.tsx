@@ -82,7 +82,8 @@ export const SideNavigation: React.FC = () => {
       initial={{ opacity: 0, x: 50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-50 ${isMobile ? 'block' : 'hidden md:block'}`}
+      // Modify this className to be visible on mobile
+      className={`fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-50 ${isMobile ? 'block' : 'block md:block'}`}
     >
       <div className="bg-black/10 backdrop-blur-sm rounded-full p-1.5 md:p-2 shadow-lg">
         <div className="relative">
