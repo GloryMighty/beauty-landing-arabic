@@ -148,7 +148,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             <motion.a
-              href="https://wa.me/358451333953"
+              href="https://wa.me/905070711259"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
@@ -162,7 +162,7 @@ const Index = () => {
               </div>
               <div>
                 <h3 className="text-lg font-bold">{t('contact.whatsapp')}</h3>
-                <p className="text-muted-foreground text-sm">+358 45 1333953</p>
+                <p className="text-muted-foreground text-sm">+90 507 071 1259</p>
               </div>
             </motion.a>
 
