@@ -189,7 +189,7 @@ const Index = () => {
           {/* New Widgets Section */}
           <div className="grid md:grid-cols-2 gap-8 mt-8">
             <motion.a
-              href="https://example.com/advanced-solution"
+              href="https://tur.it.com/"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
