@@ -5,6 +5,15 @@ import { Check, MessageSquare, Mail } from "lucide-react";
 import { Navbar } from '@/components/Navbar';
 import { SideNavigation } from '@/components/SideNavigation';
 import Map from '@/components/Map';
+import Link from 'next/link'; // Import Link component from next/link
+
+const Footer = () => (
+  <footer className="bg-background py-4 text-center">
+    <Link href="https://vimawebs.com">
+      By VIMA with ❤️
+    </Link>
+  </footer>
+);
 
 const Index = () => {
   const { t } = useTranslation('common');
@@ -228,6 +237,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <Footer /> {/* Include the Footer component here */}
     </div>
   );
 };
