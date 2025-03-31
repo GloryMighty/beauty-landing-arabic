@@ -13,7 +13,7 @@ i18n
       ar: { common: arCommon },
       tr: { common: trCommon },
     },
-    lng: 'ar', // default language
+    lng: 'en', // default language
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false, // react already escapes values

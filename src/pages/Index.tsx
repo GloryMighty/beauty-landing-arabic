@@ -9,8 +9,8 @@ import Link from 'next/link'; // Import Link component from next/link
 
 const Footer = () => (
   <footer className="bg-background py-4 text-center">
-    <Link href="https://vimawebs.com">
-      By VIMA with ❤️
+    <Link href="https://target-reached.com">
+      By Target Reached with ❤️
     </Link>
   </footer>
 );
